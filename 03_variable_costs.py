@@ -35,7 +35,8 @@ def not_blank(question, error):
 
 
 # currency formatting function
-
+def currency(x)
+    return "${:.2f}".format(x)
 
 # main routine
 
@@ -102,4 +103,4 @@ print(variable_frame)
 
 print()
 
-print("variable costs: $(:.2f)")
+print("variable costs: ${:.2f}".format(variable_sub))
