@@ -33,27 +33,27 @@ def not_blank(question, error):
 
     return response
 
-
 # currency formatting function
-def currency(x)
+def currency(x):
     return "${:.2f}".format(x)
 
 # main routine
 
 # Set up dictionaries and lists
 
-item_lists = []
+item_list = []
 quantity_list = []
 price_list = []
 
 variable_dict = {
     "Item": item_list,
-    "Quantity": quantity,
+    "Quantity": quantity_list,
     "Price": price_list
 }
 
 # Get user data
-product name = not_blank("Prouction name: ", "The product name can't be blank")
+product_name = not_blank("Prouction name: ",
+                         "The product name can't be blank.")
 
 # loop to get component, quantity and price
 item_name = ""
@@ -62,14 +62,14 @@ while item_name.lower() != "xxx":
     print()
     # get name, quantity and item
     item_name = not_blank("Item name: ",
-                          "The component nme can't be "
+                          "The component name can't be "
                           "blank.")
     if item_name.lower() == "xxx":
         break
 
     quantity = num_check("Quantity:",
                          "The amount must be a whole number "
-                         "mote than zero",
+                         "more than zero",
                          int)
     price = num_check("How much for a single item? $",
                       "The price must be a number <more than 0>",
@@ -103,4 +103,4 @@ print(variable_frame)
 
 print()
 
-print("variable costs: ${:.2f}".format(variable_sub))
+print("Variable costs: ${:.2f}".format(variable_sub))
