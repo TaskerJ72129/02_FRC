@@ -31,7 +31,7 @@ def not_blank(question, error):
             print("{}.  \nPlease try again.\n".format(error))
             continue
 
-    return response
+        return response
 
 # currency formatting function
 def currency(x):
@@ -77,7 +77,7 @@ while item_name.lower() != "xxx":
 
 
     # add item, quantity and price to lists
-    item_list.appent(item_name)
+    item_list.append(item_name)
     quantity_list.append(quantity)
     price_list.append(price)
 

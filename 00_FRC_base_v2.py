@@ -1,7 +1,6 @@
 # import libraries
 import pandas
 
-
 # ---- Functions go here ----
 
 # checks that input is either a float or an integer that is more than 0.
@@ -21,6 +20,25 @@ def num_check(question, error, num_type):
         except ValueError:
             print(error)
 
+# Checks that the user has entered yes / no to a question
+def yes_no(question):
+
+    to_check = ["yes", "no"]
+
+    valid = False
+    while not valid:
+
+        response = input(question).lower()
+
+        for var_item in to_check:
+            if response == var_item:
+                return response
+            elif response == var_item[0]:
+                return var_item
+
+        print("Please enter either yes or no...\n")
+
+# Checks that string response is not blank
 def not_blank(question, error):
 
     valid = False 
@@ -64,6 +82,13 @@ def get_expenses(var_fixed):
         if item_name.lower() == "xxx":
             break
 
+        if var_fixed == " variable":
+            quantity = num_check("Quantity:",
+                                 "The amount must be a whole number more than 0",
+                                 int)
+        else:
+            quantity = 1
+
         quantity = num_check("Quantity:",
                              "The amount must be a whole number "
                              "more than zero",
@@ -94,21 +119,39 @@ def get_expenses(var_fixed):
         expense_frame[item] = expense_frame[item].apply(currency)
 
     return [expense_frame, sub_total]
-# main routine
 
-# Set up dictionaries and lists
 
+# ***** Main routine goes here *****
 # Get product name
 product_name = not_blank("Prouction name: ", "The product name can't be blank")
 
+# get variable costs
 variable_expenses = get_expenses("variable")
 variable_frame = variable_expenses[0]
 variable_sub = variable_expenses[1]
 
-# ************************ Printing Area **************************
+# get fixed costs
+fixed_expenses = get_expenses("fixed")
+fixed_frame = fixed_expenses[0]
+fixed_sub = fixed_expenses[1]
 
-print()
+# Find Total Costs
+
+# Ask user for profit goal
+
+# Calculate reccommended price
+
+# Write data to file
+
+# *** Printing Area ***
+
+print("**** Variable Costs ****")
 print(variable_frame)
 print()
 
-print("variable costs: ${:.2f}".format(variable_sub))
+print("Variable costs: ${:.2f}".format(variable_sub))
+
+print("**** Fixed Costs ****")
+print(fixed_frame[['Cost']])
+print()
+print("fixed costs: ${:.2f}".format(fixed_sub))
