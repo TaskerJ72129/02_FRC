@@ -82,17 +82,13 @@ def get_expenses(var_fixed):
         if item_name.lower() == "xxx":
             break
 
-        if var_fixed == " variable":
+        if var_fixed == "variable":
             quantity = num_check("Quantity:",
                                  "The amount must be a whole number more than 0",
                                  int)
         else:
             quantity = 1
 
-        quantity = num_check("Quantity:",
-                             "The amount must be a whole number "
-                             "more than zero",
-                             int)
         price = num_check("How much for a single item? $",
                           "The price must be a number <more than 0>",
                           float)
@@ -121,9 +117,6 @@ def get_expenses(var_fixed):
     return [expense_frame, sub_total]
 
 
- Prints expense frames
-
-
 # prints expense frames
 def expense_print(heading, frame, subtotal):
     print()
@@ -148,7 +141,7 @@ variable_sub = variable_expenses[1]
 print()
 have_fixed = yes_no("Do you have fixed costs (y / n)? ")
 
-if have_fixed == "yes"
+if have_fixed == "yes":
     # get fixed costs
     fixed_expenses = get_expenses("fixed")
     fixed_frame = fixed_expenses[0]
@@ -170,4 +163,4 @@ print()
 expense_print("Variable", variable_frame, variable_sub)
 
 if have_fixed == "yes":
-    expese_print("Fixed", fixed_frame[['Cost']], fixed_sub)
+    expense_print("Fixed", fixed_frame[['Cost']], fixed_sub)
