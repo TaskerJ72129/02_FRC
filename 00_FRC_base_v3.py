@@ -149,6 +149,7 @@ if have_fixed == "yes":
 else:
     fixed_sub = 0
 
+total_cost = currency(fixed_sub + variable_sub)
 # Ask user for profit goal
 
 # Calculate reccommended price
@@ -164,3 +165,6 @@ expense_print("Variable", variable_frame, variable_sub)
 
 if have_fixed == "yes":
     expense_print("Fixed", fixed_frame[['Cost']], fixed_sub)
+
+
+print("Total Cost: " + total_cost)
