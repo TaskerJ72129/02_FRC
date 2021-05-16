@@ -80,3 +80,7 @@ def profit_goal(total_costs):
             profit_type = "$"
             # Get amount (everything after the $)
             amount = response[1:]
+
+        # check if thr last character is %
+        elif response [1] == "%":
+            profit_type = "$"
