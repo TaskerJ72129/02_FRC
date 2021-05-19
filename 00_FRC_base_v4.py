@@ -241,3 +241,5 @@ print()
 print("**** Profit & Sales Targets ****")
 print("Profit Target: ${:2f}".format(profit_target))
 print("Total Sales: ${:.2f}".format(total_cost + profit_target))
+
+print()
