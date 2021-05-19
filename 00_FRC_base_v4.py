@@ -51,7 +51,7 @@ def not_blank(question, error):
 
         return response
 
-# currency formatting function
+# currency formatting function 
 def currency(x):
     return "${:.2f}".format(x)
 
