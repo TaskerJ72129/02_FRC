@@ -214,12 +214,12 @@ if have_fixed == "yes":
 else:
     fixed_sub = 0
 
+# work out thr total cost and profit target
 total_cost = currency(fixed_sub + variable_sub)
-profit_target =
-
-# Ask user for profit goal
+profit_target = profit_goal(total_cost)
 
 # Calculate reccommended price
+selling_price = 0
 
 # Write data to file
 
