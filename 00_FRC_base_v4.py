@@ -239,3 +239,4 @@ print()
 
 print()
 print("**** Profit & Sales Targets ****")
+print("Profit Target: ${:2f}".format(profit_target))
