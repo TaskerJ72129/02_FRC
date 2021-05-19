@@ -194,6 +194,11 @@ def profit_goal(total_costs):
             return goal
 
 
+# rounding function
+def round_up(amount, round_to):
+    return int(math.ceil(amount / round_to)) * round_to
+
+
 # ***** Main routine goes here *****
 # Get product name
 product_name = not_blank("Prouction name: ", "The product name can't be blank")
