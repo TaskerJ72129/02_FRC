@@ -238,3 +238,4 @@ print("****  Total Costs - {} ****".format(total_cost))
 print()
 
 print()
+print("**** Profit & Sales Targets ****")
