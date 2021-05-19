@@ -243,3 +243,4 @@ print("Profit Target: ${:2f}".format(profit_target))
 print("Total Sales: ${:.2f}".format(total_cost + profit_target))
 
 print()
+print("**** Recommended Selling Price: ${:.2f}".format(selling_price))
