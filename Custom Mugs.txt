@@ -1,0 +1,27 @@
+**** Fund Raising - Custom Mugs ****
+
+**** Variable Costs ****
+            Price  Quantity     Cost
+Item                                
+Plain Mugs  $1.00       300  $300.00
+Printing    $0.75       300  $225.00
+Packaging   $0.50       100   $50.00
+Variable Costs: $575.00
+
+**** Fixed Costs ****
+              Cost
+Item              
+Stall Hire  $25.00
+Artwork     $35.00
+Signage     $15.00
+Fixed Costs $75.00
+
+**** Total Costs: $650.00 ****
+
+**** Profit & sales Targets ****
+Profit Target: $750.00
+Required Sales: $1400.00
+
+**** Pricing ****
+Selling Price: $4.67
+Recommended Price: $5.00
